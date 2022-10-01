@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Problema</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <input type="button" id="boton1" value="Mostrar formulario">
+    <input type="button" id="boton2" value="Mostrar elementos
+html del formulario"><br>
+    <div id="formulario">
+    </div>
+    <script>
+        $("#boton1").click(function () {
+            $("#formulario").html('<form>Ingrese nombre:<input ' +
+                'type="text" id="nombre"><br>Ingrese clave:<input ' +
+                'type="text" id="clave"><br><input type="submit" ' +
+                'value="confirmar"></form>');
+        });
+        $("#boton2").click(function () {
+            alert($("#formulario").html());
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>Problema</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <style>
+        #parrafos p{
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parrafos">
+        <p>párrafo 2 - párrafo 2 - párrafo 2 - párrafo 2 párrafo 2 - párrafo 2 - párrafo 2 - párrafo 2 - párrafo 2</p>
+        <p>párrafo 2 - párrafo 2 - párrafo 2 - párrafo 2</p>
+        <p>párrafo 3 - párrafo 3 - párrafo 3 - párrafo 3 -
+            párrafo 3 - párrafo 3 - párrafo 3 -
+            párrafo 3 - párrafo 3 - párrafo 3 - párrafo 3 -
+            párrafo 3 - párrafo 3 - párrafo 3
+            párrafo 3 - párrafo 3</p>
+        <span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel veritatis ullam perferendis, eius quia ipsa eaque voluptatibus aperiam sequi. Ea minima molestiae fugiat ab expedita, suscipit labore corrupti incidunt voluptates.
+        </span>
+        <p>párrafo 4 - párrafo 4 - párrafo 4 - párrafo 4
+            - párrafo 4</p>
+    </div>
+    <script>
+        $("#parrafos p").each(function() {
+            if ($(this).text().length < 100) {
+                $(this).css("background-color", "#ff0");
+            }
+        });
+
+        $("#parrafos p:nth-child(2)").click(function(){
+            alert($("#parrafos p:nth-child(2)").text())
+        })
+
+    </script>
+</body>
+
+</html>
